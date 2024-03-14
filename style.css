@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  .container {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(230deg, #3b92e9 50%, #40443f 50%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .box {
+    width: 30%;
+    background-color: aliceblue;
+    min-height: 70vh;
+    padding: 1.6rem 1rem
+  }
+  .new-task{
+      margin-bottom: 2px;
+      display: grid;
+      grid-template-columns: 85% 15%;
+  }
+  .new{
+      padding: 10px;
+      outline:none;
+      background-color: #a1c1d3;
+  }
+  .new, .add{
+      font-size: 1rem;
+      border: none;
+      color:white
+  }
+  .add{
+      background-color: #373636;
+      padding: 10px;
+      cursor: pointer;
+  }
+  .task-list{
+      list-style:none;
+      margin-top: 1rem;
+  }
+  .task{
+      padding: 10px 15px;
+      background-color: rgb(225, 225, 225);
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+      border-radius: 20px;
+      position: relative;
+      transition: 0.1s ease;
+  }
+  .fa-trash{
+      color:red;
+      position: absolute;
+      top:15px;
+      right:15px;
+      cursor: pointer;
+  }
+  .fa-check{
+      color:green;
+      position: absolute;
+      top:15px;
+      right:45px;
+      cursor: pointer;
+  }
+  .task.active{
+      color:white;
+      background-color: #fdcd3b;
+      text-decoration: line-through;
+      font-style: italic;
+  }
+  @media screen and (max-width: 1200px){
+      .box{
+          width:40%
+      }
+  }
+  @media screen and (max-width:900px){
+      .box{
+          width:60%;
+      }
+  }
+  @media screen and (max-width:600px){
+      .box{
+          width:90%;
+      }
+      .new-task{
+          margin-bottom: 2px;
+          display: grid;
+          grid-template-columns: 80% 20%;
+      }
+  }
